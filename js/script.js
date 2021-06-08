@@ -1,5 +1,4 @@
 
-// In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100. L’utente non può inserire più volte lo stesso numero.
 
 
 // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero. La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
@@ -45,17 +44,31 @@ console.log(numeriPc);
 //* array che contiene i numeri inseriti dall'utente
 
 var numeriUser = [];
-
 //* condizione per far si che se l'utente inserisce due volte lo stesso numero il programma lo avverte e ne fa inserire un altro
 
-while(numeriUser.length < (10 - 5)){
+while(numeriUser.length < (100 - 16)){
 
     var scelta = parseInt(prompt('Inserisci un numero da 1 a 100'));
 
-    if(numeriUser.includes(scelta)){
-        alert('Il numero è già stato inserito...perfavore provane un altro!');
+    if(!numeriPc.includes(scelta)){
+
+        if(numeriUser.includes(scelta)){
+            alert('Il numero è già stato inserito...perfavore provane un altro!');
+        } else{
+            numeriUser.push(scelta);
+        }
     } else{
-        numeriUser.push(scelta);
+        if(numeriUser.length >= 16){
+            alert('Complimenti! Nonostante tu non sia riuscito a completare il gioco hai piazzato ' + numeriUser.length + ' numeri!');
+        } else if(numeriUser.length == 1){
+            alert('Mi dispiace ma hai piazzato solamente un numero!');
+        } else if(numeriUser.length == 0){
+            alert('Accidenti che sfortuna! Non sei riuscito a piazzare nessun numero!');
+        } else{
+            alert('Mi dispiace ma hai piazzato solamente ' + numeriUser.length + ' numeri!')
+        }
+        break;
+
     }
 
     console.log(scelta);
@@ -70,11 +83,7 @@ console.log(numeriUser);
 
 
 
-
-
-
-
-
+//? SE IL NUMERO E' NELLA LISTA DEI NUMERI BOMBA LA PARTITA TERMINA ALTRIMENTI SI CONTINUA. LA PARTITA TERMINA QUANDO IL GIOCATORE INSERISCE UN NUMERO VIETATO O RAGGIUNGE IL MASSIMO DI NUMERI CONSENTITI
 
 
 
