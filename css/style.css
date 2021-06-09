@@ -1,0 +1,139 @@
+/*! COMMON */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../img/Background-Red.jpg);
+    background-size: cover;
+    
+}
+
+
+
+/*? MAIN */
+
+.container{
+    width: 40%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: lightslategrey;
+    
+
+}
+
+
+/* console alta di identificazione bombe */
+.console{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    background-color:  lightgray;
+    box-shadow: 1px 1px 5px 3px darkgray inset;
+    display: flex;
+}
+
+.count_bomb,
+.count_user{
+    width: calc((100% / 10) * 3);
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.name_game{
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: #b00;
+   
+}
+
+#difficolta{
+    text-align: center;
+    font-weight: bold;
+}
+
+.radar{
+    height: 60px;
+    width: 60px;
+    background-color: darkred;
+    margin-top: 5px;
+    text-align: center;
+    color: red;
+    box-shadow: 1px 1px 1px 1px salmon inset;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 5px;
+    line-height: 50px;
+    border-radius: 50%;
+}
+
+
+
+
+
+/* inizio posizionamento bombe */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row div{
+    height: 55px;
+    width: calc((100% / 10) * 1);
+    line-height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    
+    
+}
+
+.grey{
+    background-color: grey;
+    box-shadow: 1px 1px 5px 3px lightgray inset;
+    color: red;
+
+}
+
+.change{
+    background-color: lightgray;
+}
+
+.cross{
+    background-color: red;
+    color: darkslategrey;
+}
+
+.btn_container{
+    display: flex;
+    justify-content: center;   
+    
+}
+
+.btn{
+    color: black;
+    background-color: darkgrey;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px 1px black;
+    margin: 0 20px 20px;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
